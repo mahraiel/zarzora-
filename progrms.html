@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .program {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .program img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .program-content {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+
+    .program-content h4 {
+      margin: 0;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .program-content h2 {
+      margin: 5px 0;
+      font-size: 24px;
+    }
+
+    .learn-more-btn {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background-color: orange;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .learn-more-btn:hover {
+      background-color: darkorange;
+    }
+
+    @media (max-width: 992px) {
+      .programs-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .programs-grid {
+        grid-template-columns: 1fr;
+      }
+    } <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Chapelhill</title>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Neue', cursive, sans-serif;
+        }
+        
+        body {
+            background-color: #F8F4E9;
+            color: #5A3E2B;
+            line-height: 1.6;
+            background-image: url('https://img.freepik.com/free-vector/hand-drawn-childish-pattern-background_23-2149073139.jpg?w=1380&t=st=1690834563~exp=1690835163~hmac=...');
+            background-blend-mode: overlay;
+            background-attachment: fixed;
+            background-size: 30%;
+            background-opacity: 0.1;
+        }
+        
+        /* Header */
+        header {
+            background-color: #E8D9C5;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(90, 62, 43, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #5A3E2B;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0px rgba(255,255,255,0.5);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #8C6A56;
+            font-weight: 500;
+        }
+        
+        .header-decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            opacity: 0.2;
+        }
+        
+        .decoration-1 {
+            top: 10px;
+            left: 10px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%235A3E2B' d='M50 0 L100 50 L50 100 L0 50 Z'/%3E%3C/svg%3E");
+        }
+        
+        .decoration-2 {
+            bottom: 10px;
+            right: 10px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle fill='%238C6A56' cx='50' cy='50' r='50'/%3E%3C/svg%3E");
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #5A3E2B;
+            padding: 15px 0;
+            position: relative;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            margin: 0 20px;
+            position: relative;
+        }
+        
+        nav a {
+            color: #E8D9C5;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            color: #F8F4E9;
+            background-color: #8C6A56;
+            transform: translateY(-3px);
+        }
+        
+        /* Main Content */
+        .about-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .page-title {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #5A3E2B;
+            margin-bottom: 50px;
+            position: relative;
+            text-shadow: 2px 2px 0px rgba(255,255,255,0.5);
+        }
+        
+        .page-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 6px;
+            background-color: #8C6A56;
+            border-radius: 3px;
+        }
+        
+        .page-title::before {
+            content: '✏️';
+            position: absolute;
+            left: 25%;
+            top: -15px;
+            font-size: 1.5rem;
+        }
+        
+        .about-section {
+            background-color: rgba(255,255,255,0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(90, 62, 43, 0.1);
+            margin-bottom: 40px;
+            border: 3px dashed #E8D9C5;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23E8D9C5' d='M50 0 L100 50 L50 100 L0 50 Z'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .section-title {
+            color: #5A3E2B;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px dotted #8C6A56;
+            display: inline-block;
+        }
+        
+        .about-section p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight-box {
+            background-color: #E8D9C5;
+            padding: 25px;
+            border-radius: 0 15px 15px 15px;
+            margin: 30px 0;
+            position: relative;
+            box-shadow: 3px 3px 0px rgba(90, 62, 43, 0.1);
+        }
+        
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid #E8D9C5;
+            border-bottom: 15px solid #E8D9C5;
+            border-top: 15px solid transparent;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0;
+            font-style: italic;
+            color: #5A3E2B;
+            font-weight: 500;
+        }
+        
+        .owner-profile {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            background-color: #F8F4E9;
+            padding: 30px;
+            border-radius: 15px;
+            border: 3px solid #8C6A56;
+            position: relative;
+        }
+        
+        .owner-profile::after {
+            content: '⭐';
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 2rem;
+            transform: rotate(15deg);
+        }
+        
+        .owner-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #E8D9C5;
+            margin-right: 30px;
+            background-image: url('https://img.freepik.com/free-vector/hand-drawn-childish-pattern-background_23-2149073139.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 5px solid #8C6A56;
+            box-shadow: 5px 5px 0px rgba(90, 62, 43, 0.2);
+        }
+        
+        .owner-info h3 {
+            font-size: 1.8rem;
+            color: #5A3E2B;
+            margin-bottom: 10px;
+            text-decoration: underline wavy #8C6A56;
+        }
+        
+        .owner-info p {
+            margin-bottom: 15px;
+        }
+        
+        .certifications {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .cert-badge {
+            background-color: #5A3E2B;
+            color: #E8D9C5;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            box-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #5A3E2B;
+            color: #E8D9C5;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L50,10 L100,0 Z' fill='%235A3E2B'/%3E%3C/svg%3E");
+            background-size: 100% 100%;
+        }
+        
+        .social-media {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #E8D9C5;
+            color: #5A3E2B;
+            border-radius: 50%;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 3px 3px 0px rgba(0,0,0,0.1);
+        }
+        
+        .social-icon:hover {
+            background-color: #8C6A56;
+            color: #FFFFFF;
+            transform: translateY(-5px) rotate(10deg);
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Childish Elements */
+        .childish-element {
+            position: fixed;
+            z-index: -1;
+            opacity: 0.1;
+            animation: float 5s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+            
+            .owner-profile {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .owner-photo {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .owner-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+    border: 5px solid #8C6A56;
+    box-shadow: 5px 5px 0px rgba(90, 62, 43, 0.2);
+}
+            .page-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Floating childish elements -->
+    <div class="childish-element" style="top:10%; left:5%; font-size:3rem;">✏️</div>
+    <div class="childish-element" style="top:30%; right:8%; font-size:4rem;">🎨</div>
+    <div class="childish-element" style="bottom:20%; left:10%; font-size:3.5rem;">🧸</div>
+    <div class="childish-element" style="bottom:30%; right:5%; font-size:2.5rem;">📚</div>
+    
+    <header>
+        <div class="decoration-1 header-decoration"></div>
+        <div class="decoration-2 header-decoration"></div>
+        <div class="logo">Zarzour Family Day Care</div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="progrms.html">Programs</a></li>
+            <li><a href="conecr us.html">Contact</a></li>
+        </ul>
+    </nav>
+  </style>
+</head>
+<body>
+
+<div class="programs-grid">
+
+  <div class="program">
+    <img src="D:\pp\my\swer\a333e4db-196a-454d-8bc7-e416dd307536.jfif" alt="Infants">
+    <div class="program-content">
+      <h4>3 WEEKS - 12 MONTHS</h4>
+      <h2>Infants</h2>
+    </div>
+    <a href="prokid.html" class="learn-more-btn">Learn More</a>
+  </div>
+
+  <div class="program">
+    <img src="D:\pp\my\swer\7a68035d-0fcb-41f4-9fcb-f58cfaccc7bc.jfif" alt="Toddlers">
+    <div class="program-content">
+      <h4>2 YEARS</h4>
+      <h2>Toddlers</h2>
+    </div>
+    <a href="pro1.html" class="learn-more-btn">Learn More</a>
+  </div>
+
+  <div class="program">
+    <img src="D:\pp\my\swer\a2bde6a2-3286-4581-9b8b-ad64a7bf1de5.jfif" alt="Explorers">
+    <div class="program-content">
+      <h4>2 - 3 YEARS</h4>
+      <h2>Explorers</h2>
+    </div>
+    <a href="prog 23.html" class="learn-more-btn">Learn More</a>
+  </div>
+
+  
+  <div class="program">
+    <img src="D:\pp\my\swer\05cdf69a-84ed-45d2-a5b0-d6cf48d1019c.jfif " alt="Pre-K Prep 2">
+    <div class="program-content">
+      <h4>3 YEARS FULLY POTTY TRAINED</h4>
+      <h2>Pre-K Prep 2</h2>
+    </div>
+    <a href="pro3.html" class="learn-more-btn">Learn More</a>
+  </div>
+
+  <div class="program">
+    <img src="D:\pp\my\swer\4e709749-5057-484b-b3a2-2222135b1f09.jfif" alt="Private Pre-K">
+    <div class="program-content">
+      <h4>3 - 4 YEARS</h4>
+      <h2>Private Pre-K</h2>
+    </div>
+    <a href="pro4.html" class="learn-more-btn">Learn More</a>
+  </div>
+
+  <div class="program">
+    <img src="D:\pp\my\d07ce472-f187-49b2-993d-5547178263fa.jfif" alt="Kindergarten">
+    <div class="program-content">
+      <h4>5 - 6 YEARS</h4>
+      <h2>Kindergarten</h2>
+    </div>
+    <a href="pro5.html" class="learn-more-btn">Learn More</a>
+  </div>
+
+  <div class="program">
+    <img src="D:\pp\my\cfe4f55f-78a7-4f64-9a09-767587f5134f.jfif" alt="After School">
+    <div class="program-content">
+      <h4>K - 12 YEARS</h4>
+      <h2>After School</h2>
+    </div>
+    <a href="pro6.html" class="learn-more-btn">Learn More</a>
+  </div>
+  <div class="program">
+    <img src="D:\pp\my\swer\1691261039179.jfif" alt=" School">
+    <div class="program-content">
+      <h4>12 - 16 YEARS</h4>
+      <h2>After School</h2>
+    </div>
+    <a href="prog1.html" class="learn-more-btn">Learn More</a>
+  </div>
+</div>
+
+</body>
+&copy; mahraiel.
+
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infants Program - Chapelhill</title>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Neue', cursive, sans-serif;
+        }
+        
+        body {
+            background-color: #F8F4E9;
+            color: #5A3E2B;
+            line-height: 1.6;
+            background-image: url('https://img.freepik.com/free-vector/hand-drawn-childish-pattern-background_23-2149073139.jpg');
+            background-blend-mode: overlay;
+            background-size: 30%;
+            background-opacity: 0.1;
+        }
+        
+        /* Header */
+        header {
+            background-color: #E8D9C5;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(90, 62, 43, 0.1);
+            position: relative;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #5A3E2B;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0px rgba(255,255,255,0.5);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #8C6A56;
+            font-weight: 500;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #5A3E2B;
+            padding: 15px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            margin: 0 20px;
+        }
+        
+        nav a {
+            color: #E8D9C5;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            color: #F8F4E9;
+            background-color: #8C6A56;
+            transform: translateY(-3px);
+        }
+        
+        /* Main Content */
+        .program-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .page-title {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #5A3E2B;
+            margin-bottom: 30px;
+            position: relative;
+            text-shadow: 2px 2px 0px rgba(255,255,255,0.5);
+        }
+        
+        .page-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 6px;
+            background-color: #8C6A56;
+            border-radius: 3px;
+        }
+        
+        .program-card {
+            background-color: rgba(255,255,255,0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(90, 62, 43, 0.1);
+            margin-bottom: 40px;
+            border: 3px dashed #E8D9C5;
+            position: relative;
+        }
+        
+        .age-badge {
+            position: absolute;
+            top: -15px;
+            right: 30px;
+            background-color: #8C6A56;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            box-shadow: 3px 3px 0px rgba(90, 62, 43, 0.2);
+        }
+        
+        .program-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .highlight-item {
+            background-color: #E8D9C5;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .highlight-icon {
+            font-size: 1.8rem;
+            color: #5A3E2B;
+            margin-right: 15px;
+        }
+        
+        .highlight-text {
+            font-weight: 500;
+        }
+        
+        .program-description p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .baby-care-features {
+            background-color: #5A3E2B;
+            color: #E8D9C5;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .care-item {
+            display: flex;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #8C6A56;
+            align-items: center;
+        }
+        
+        .care-icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #E8D9C5;
+        }
+        
+        .care-text {
+            flex: 1;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #5A3E2B;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 5px 5px 0px rgba(90, 62, 43, 0.2);
+        }
+        
+        .cta-button:hover {
+            background-color: #8C6A56;
+            transform: translateY(-5px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #5A3E2B;
+            color: #E8D9C5;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        .social-media {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #E8D9C5;
+            color: #5A3E2B;
+            border-radius: 50%;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 3px 3px 0px rgba(0,0,0,0.1);
+        }
+        
+        .social-icon:hover {
+            background-color: #8C6A56;
+            color: #FFFFFF;
+            transform: translateY(-5px) rotate(10deg);
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+            
+            .page-title {
+                font-size: 2.2rem;
+            }
+            
+            .program-card {
+                padding: 30px 20px;
+            }
+            
+            .age-badge {
+                right: 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+          </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="pro">Programs</a></li>
+            <li><a href="conecr us.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="program-container">
+        <h1 class="page-title">Infants Program</h1>
+        
+        <div class="program-card">
+            <div class="age-badge">3 WEEKS - 12 MONTHS</div>
+            
+            <div class="program-description">
+                <p>Our Infant Program provides a warm, nurturing "home away from home" for your baby's first year. We understand the unique needs of infants and provide individualized care that supports their rapid growth and development during these precious early months.</p>
+                
+                <p>With a 1:3 caregiver-to-infant ratio, we ensure each baby receives the loving attention they need to feel secure while developing trust and forming healthy attachments.</p>
+            </div>
+            
+            <div class="program-highlights">
+                <div class="highlight-item">
+                    <div class="highlight-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="highlight-text">
+                        Individualized feeding & sleeping schedules
+                    </div>
+                </div>
+                
+                <div class="highlight-item">
+                    <div class="highlight-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="highlight-text">
+                        Cognitive development through sensory play
+                    </div>
+                </div>
+                
+                <div class="highlight-item">
+                    <div class="highlight-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <div class="highlight-text">
+                        Fine & gross motor skill development
+                    </div>
+                </div>
+                
+                <div class="highlight-item">
+                    <div class="highlight-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="highlight-text">
+                        Daily story time & language exposure
+                    </div>
+                </div>
+                
+                <div class="highlight-item">
+                    <div class="highlight-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="highlight-text">
+                        Soothing music & lullabies
+                    </div>
+                </div>
+                
+                <div class="highlight-item">
+                    <div class="highlight-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="highlight-text">
+                        Loving, experienced caregivers
+                    </div>
+                </div>
+            </div>
+            
+            <div class="baby-care-features">
+                <h3 style="color: #E8D9C5; margin-bottom: 20px;">Our Infant Care Includes:</h3>
+                
+                <div class="care-item">
+                    <div class="care-icon">
+                        <i class="fas fa-bottle"></i>
+                    </div>
+                    <div class="care-text">
+                        Bottle preparation and feeding according to your instructions
+                    </div>
+                </div>
+                
+                <div class="care-item">
+                    <div class="care-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <div class="care-text">
+                        Safe sleep practices in clean, separate cribs
+                    </div>
+                </div>
+                
+                <div class="care-item">
+                    <div class="care-icon">
+                        <i class="fas fa-baby-carriage"></i>
+                    </div>
+                    <div class="care-text">
+                        Daily tummy time and movement activities
+                    </div>
+                </div>
+                
+                <div class="care-item">
+                    <div class="care-icon">
+                        <i class="fas fa-temperature-low"></i>
+                    </div>
+                    <div class="care-text">
+                        Regular diaper changes and skin care
+                    </div>
+                </div>
+                
+                <div class="care-item">
+                    <div class="care-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div class="care-text">
+                        Detailed daily reports for parents
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="conecr us.html" class="cta-button">Schedule a Tour</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+   
+        <div class="copyright">
+            &copy; 2023 Chapelhill School. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>
